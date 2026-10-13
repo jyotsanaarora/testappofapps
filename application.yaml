@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-rename
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jyotsanaarora/testfinalizer.git
+    path: ./
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
