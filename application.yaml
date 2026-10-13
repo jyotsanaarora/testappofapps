@@ -3,13 +3,14 @@ kind: Application
 metadata:
   name: guestbook
   namespace: openshift-gitops
-  # no resources-finalizer.argocd.argoproj.io
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps
-    path: guestbook
+    repoURL: https://github.com/jyotsanaarora/testfinalizer.git
+    path: ./
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+
