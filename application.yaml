@@ -7,9 +7,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/argoproj/argocd-example-apps
-    path: guestbook
+    repoURL: https://github.com/jyotsanaarora/testdelfinalizer.git
+    path: ./
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    
